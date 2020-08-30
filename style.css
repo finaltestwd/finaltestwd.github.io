@@ -87,6 +87,6 @@ font-size:120%;
 	50%{transform:translateY(-20px);}
 	100%{transform:translateY(0);}
 }
-@media(max-width:320px){
+@media(max-width:370px){
 	.text-justify{ margin-left:50%}
 }
