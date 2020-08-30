@@ -88,5 +88,5 @@ font-size:120%;
 	100%{transform:translateY(0);}
 }
 @media(max-width:380px){
-	.text-justify{pading-left:50%}
+	.begin h1{color:aqua}}
 }
