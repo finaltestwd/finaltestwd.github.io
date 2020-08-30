@@ -1,0 +1,92 @@
+@charset "utf-8";
+*{padding:0;
+margin:0}
+.begin {background-image:url(photo-1487925876428-ebd8a23ee1d4.jpg);
+width:100%;
+height:600px;
+padding-top:5%;
+line-height:5
+}
+
+.begin h1{text-align: center;
+	padding-top:7%;
+font-size:6em;
+color:aliceblue;
+}
+.begin ul {list-style-type: none;
+text-align: center}
+
+.begin ul li{display:inline;
+color:aliceblue!important;
+margin:5%; 
+font-size:150%
+}
+
+.begin li i{color:aliceblue}
+
+.mouse{
+	display:inline-block;
+	margin-left:50%;
+	color:#AD42DC;
+	font-size:110%;
+	transition:all 0.3s ease}
+
+.bounce{border-radius:50px;
+animation:bounce 2s infinite;
+}
+.about img{margin-left:40%;
+width:36%}
+
+.text-justify{ margin-right:40%}
+
+.jumbotron{background-color:#F2FDFA!important}
+
+.icon{font-size:300%; color:#783094}
+
+.products img{width:70%}
+
+.portfolio {color:#783094}
+
+.reach li {margin-left:6%; margin-top:4%}
+
+.reach li i{font-size:300%; color:#783094}
+
+.contact {margin-top:3%;display:block}
+
+.name{margin-right: 20%; margin-left:25%; }
+
+form input{
+	border-left-style: none;
+      border-top-style: none; 
+	  border-right-style: none;
+	  border-color:#C98FE2;
+	  border-bottom-width:thin;}
+.message {margin-left:25%}
+
+.sendmessage{display:block; border-color:#670C9D!important;
+color:#C250DF!important; margin-left:44%; margin-top:2%; border:thick; border-radius:25%!important; margin-bottom: 2%}
+
+.footer{background-image:url("Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg"); width:100%; height:150px; background-repeat: no-repeat; background-size: cover; padding-top:4%}
+.footer p{text-align:center;
+}
+.footer ul {list-style-type: none;
+text-align: center;}
+
+.footer ul li{display:inline;
+color:aliceblue;
+margin:3%;
+font-size:120%;
+}
+.footer i{color:aliceblue!important}
+
+.Get-in-touch h1{color:#783094}
+
+
+@keyframes bounce {
+	0%{transform:translateY(0);}
+	50%{transform:translateY(-20px);}
+	100%{transform:translateY(0);}
+}
+@media(max-width:320px){
+	.text-justify{ margin-left:50%}
+}
