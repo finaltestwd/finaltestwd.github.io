@@ -88,5 +88,5 @@ font-size:120%;
 	100%{transform:translateY(0);}
 }
 @media(max-width:380px){
-	.begin h1{color:aqua}}
-}
+	.begin h1{color:aqua!important}}
+
