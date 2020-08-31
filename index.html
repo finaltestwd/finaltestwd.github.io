@@ -37,7 +37,7 @@
 		<div class="col-md-6 col-ms-12 col-12">
 			<img class="img-fluid rounded-circle shadow-lg rounded" src="18237897_1090946434382843_4511618473897832543_o.jpg" alt="avarta" >
 		</div>
-		<div class="col-md-6 col-ms-12 col-12">
+		<div class="col-md-6 col-ms-12 col-12 myprofile">
 		<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum, remaining essentially unchanged.</p>
 		</div>
 	</div>
@@ -82,29 +82,29 @@
 			</div>
 			<div class="col-12">
 				<ul class="list-unstyled list-inline">
-					<li class="list-inline-item active"><a href="#">All</a></li>
-					<li class="list-inline-item"><a href="#">Web design</a></li>
-					<li class="list-inline-item"><a href="#">Application</a></li>
-					<li class="list-inline-item"><a href="#">Development</a></li>	
+					<li class="list-inline-item active" data-target="all" data-toggle="portfilter">All</li>
+					<li class="list-inline-item" data-target="Web design" data-toggle="portfilter">Web design</li>
+					<li class="list-inline-item" data-target="Application" data-toggle="portfilter">Application</li>
+					<li class="list-inline-item" data-target="Development" data-toggle="portfilter">Development</li>	
 				</ul>
 			</div>
 			<div class="row products mx-3">
-				<div class="col-md-4 col-sm-12">
+				<div class="col-md-4 col-sm-12" data-tag="Web design">
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
-				<div class="col-md-4 col-sm-12">
+				<div class="col-md-4 col-sm-12" data-tag="Web design">
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
-				<div class="col-md-4 col-sm-12">
+				<div class="col-md-4 col-sm-12" data-tag="Application">
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
-				<div class="col-md-4 col-sm-12 mt-4">
+				<div class="col-md-4 col-sm-12 mt-4" data-tag="Development">
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
-				<div class="col-md-4 col-sm-12 mt-4">
+				<div class="col-md-4 col-sm-12 mt-4" data-tag="Development">
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
-				<div class="col-md-4 col-sm-12 mt-4">
+				<div class="col-md-4 col-sm-12 mt-4" data-target="Application">
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
 			</div>			
@@ -177,5 +177,51 @@
 		backSpeed:100,
 		loop:true,				
 });</script>
+	
+<!--data filter-->
+<script>
+! function(d) {
+    var c = "portfilter";
+    var b = function(e) {
+        this.$element = d(e);
+        this.stuff = d("[data-tag]");
+        this.target = this.$element.data("target") || ""
+    };
+    b.prototype.filter = function(g) {
+        var e = [],
+            f = this.target;
+        this.stuff.fadeOut("fast").promise().done(function() {
+            d(this).each(function() {
+                if (d(this).data("tag") == f || f == "all") {
+                    e.push(this)
+                }
+            });
+            d(e).show()
+        })
+    };
+    var a = d.fn[c];
+    d.fn[c] = function(e) {
+        return this.each(function() {
+            var g = d(this),
+                f = g.data(c);
+            if (!f) {
+                g.data(c, (f = new b(this)))
+            }
+            if (e == "filter") {
+                f.filter()
+            }
+        })
+    };
+    d.fn[c].defaults = {};
+    d.fn[c].Constructor = b;
+    d.fn[c].noConflict = function() {
+        d.fn[c] = a;
+        return this
+    };
+    d(document).on("click.portfilter.data-api", "[data-toggle^=portfilter]", function(f) {
+        d(this).portfilter("filter")
+    })
+}(window.jQuery);// JavaScript Document
+</script>
 </body>
 </html>
