@@ -89,5 +89,8 @@ font-size:120%;
 }
 @media(max-width:380px){
 	.begin h1{color:aqua!important}
-	.text-justify {margin:0}}
+	.text-justify {
+		margin:0; 
+		ma
+	}}
 
