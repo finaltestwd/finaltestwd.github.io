@@ -1,25 +1,36 @@
 @charset "utf-8";
 *{padding:0;
 margin:0}
+
+@font-face{
+	font-family:MyFont;
+	src: url("LuckiestGuy-Regular.ttf")
+}
+@font-face{
+	font-family:MyFont0;
+	src: url("Acme-Regular.ttf")
+}
 .begin {background-image:url(photo-1487925876428-ebd8a23ee1d4.jpg);
 width:100%;
 height:600px;
 padding-top:5%;
-line-height:5
+line-height:5;
+
 }
 
 .begin h1{text-align: center;
 	padding-top:7%;
-font-size:6em;
-color:red;
+font-size:5em;
+color:#CB7A7B;
+font-family:MyFont0
 }
 .begin ul {list-style-type: none;
 text-align: center}
 
 .begin ul li{display:inline;
 color:aliceblue!important;
-margin:5%; 
-font-size:150%
+margin:3%; 
+font-size:200%
 }
 
 .begin li i{color:aliceblue}
@@ -28,8 +39,9 @@ font-size:150%
 	display:inline-block;
 	margin-left:50%;
 	color:#AD42DC;
-	font-size:110%;
-	transition:all 0.3s ease}
+	font-size:200%;
+	transition:all 0.3s ease;
+}
 
 .bounce{border-radius:50px;
 animation:bounce 2s infinite;
@@ -41,15 +53,23 @@ width:36%}
 
 .jumbotron{background-color:#F2FDFA!important}
 
-.icon{font-size:300%; color:#783094}
+.icon{font-size:400%; color:#783094}
 
 .products img{width:70%}
 
-.portfolio {color:#783094}
+.portfolio {color:#783094;}
+.portfolio h1 {font-family:MyFont;
+font-size:300%}
+
+.Get-in-touch h1{font-family:MyFont;
+font-size:300%}
 
 .reach li {margin-left:6%; margin-top:4%}
 
 .reach li i{font-size:300%; color:#783094}
+
+.reach a{color:#DF6DC6;
+		}
 
 .contact {margin-top:3%;display:block}
 
@@ -61,36 +81,80 @@ form input{
 	  border-right-style: none;
 	  border-color:#C98FE2;
 	  border-bottom-width:thin;}
-.message {margin-left:25%}
 
-.sendmessage{display:block; border-color:#670C9D!important;
-color:#C250DF!important; margin-left:44%; margin-top:2%; border:thick; border-radius:25%!important; margin-bottom: 2%}
+.sendmessage{display:block; 
+	border-color:#670C9D!important;
+	color:#C250DF!important; 
+	border:thick; border-radius:25%!important;
+	margin-top:3%; margin-bottom:3%;
+	font-size: 50%}
 
-.footer{background-image:url("Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg"); width:100%; height:150px; background-repeat: no-repeat; background-size: cover; padding-top:4%}
+label{color:#681786;
+	  font-size:110%}
+
+.footer{background-image:url("Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg"); width:100%; height:150px; background-repeat: no-repeat; background-size: cover; padding-top:2.5%}
+
 .footer p{text-align:center;
 }
+
 .footer ul {list-style-type: none;
 text-align: center;}
 
 .footer ul li{display:inline;
 color:aliceblue;
-margin:3%;
-font-size:120%;
+margin:2%;
+font-size:150%;
 }
 .footer i{color:aliceblue!important}
 
 .Get-in-touch h1{color:#783094}
 
+.copyrightt {color:#A79999}
 
 @keyframes bounce {
 	0%{transform:translateY(0);}
 	50%{transform:translateY(-20px);}
 	100%{transform:translateY(0);}
 }
-@media(max-width:380px){
-	.begin h1{color:aqua!important}
+@media(max-width:480px){
+	.begin h1{color:aqua!important;
+			  font-size:180%}
+	
+	.about img{
+		margin: 0;
+		margin-left:27.5%;
+		width:45%;
+		margin-top:-5%;
+		margin-bottom:5%}
+	
 	.text-justify {
 		margin:0; 
-		ma
-	}}
+		margin-left:10%;
+		margin-right: 10%;
+		margin-top:4%;
+		margin-bottom: 4%}
+	
+	.below-about {
+		margin:4%;
+	}
+	.icon{font-size:500%}
 
+	.items{
+		margin:0;
+		margin-top:7%;
+	}
+	
+	.reach{margin:0;
+		font-size:110%;
+		}
+	
+	.reach li{margin-bottom:10%;
+			margin-top:10%}
+	
+	.contacting{margin-bottom:7%}
+	
+	.sendmessage{margin-bottom:8%}
+	
+	.footer{ padding:0;
+	padding-top:10%}
+}
