@@ -19,7 +19,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<nav id="navbar-example2" class="navbar bg-light">
+<nav id="navbar-example2" class="navbar bg-light sticky-top">
   <a class="navbar-brand name" href="#">DANG NGUYEN</a>
   <ul class="nav nav-pills row text-justify">
     <li class="nav-item">
@@ -140,6 +140,7 @@
 				<div class="col-md-4 col-sm-12 items" data-tag="Web design">
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
+				</div>
 				<div class="col-md-4 col-sm-12 items" data-tag="Web design">
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
@@ -155,8 +156,10 @@
 				<div class="col-md-4 col-sm-12 mt-4 items" data-target="Application" >
 					<img src="Purple Beautiful Space View Night Sky Stars Wallpaper Kids Room Bedroom Nursery Photo Wallpaper Ceil.jpg" alt="products">
 				</div>
-			</div>			
-	</div>	
+			</div>
+					
+	
+			
 	</div>		
 </section>
 
@@ -167,7 +170,7 @@
 				<h1>GET IN TOUCH</h1>
 				<p class="h5 text-muted">It has survived not only five centuries, but also the leap into electronic typesetting</p>	
 				
-			  <ul class="col-12 list-unstyled list-inline reach justify-content-around">
+			  <ul class="col-12 cpl-sm-12 list-unstyled list-inline reach justify-content-around">
 			    <li class="list-inline-item active"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><br>
 			      0123-456-789</a></li>
 			    <li class="list-inline-item"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><br>Ho Chi Minh, Viet Nam</a></li>
@@ -348,5 +351,32 @@
     })
 }(window.jQuery);// JavaScript Document
 </script>
+<!--menu co dinh-->
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			var $filter = $('.head_nav');
+			var $filterSpacer = $('<div />', {
+				"class": "vnkings-spacer",
+				"height": $filter.outerHeight()
+			});
+			if ($filter.size())
+			{
+				$(window).scroll(function ()
+				{
+					if (!$filter.hasClass('fix') && $(window).scrollTop() > $filter.offset().top)
+					{
+						$filter.before($filterSpacer);
+						$filter.addClass("fix");
+					}
+					else if ($filter.hasClass('fix')  && $(window).scrollTop() < $filterSpacer.offset().top)
+					{
+						$filter.removeClass("fix");
+						$filterSpacer.remove();
+					}
+				});
+			}
+
+		});
+	</script>
 </body>
 </html>

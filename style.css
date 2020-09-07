@@ -10,6 +10,7 @@ margin:0}
 	font-family:MyFont0;
 	src: url("Acme-Regular.ttf")
 }
+.nav name {color:#F503A1!important}
 .snowflake {
   color: #fff;
   font-size: 1.5em;
@@ -310,3 +311,4 @@ margin-top:3%}
 	.about img{margin-top:2%;
 	margin-bottom:6%}
 }
+
