@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -14,9 +16,52 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 <script src="jquery-2.1.4.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<nav id="navbar-example2" class="navbar bg-light">
+  <a class="navbar-brand name" href="#">DANG NGUYEN</a>
+  <ul class="nav nav-pills row text-justify">
+    <li class="nav-item">
+      <a class="nav-link" href="#about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Get-in-touch">Get in touch</a>
+    </li>
+	<li class="nav-item">
+      <a class="nav-link" href="#Portfolio">Portfolio</a>
+    </li> 
+	 <li class="nav-item">
+      <a class="nav-link" href="#rating">Feedback</a>
+    </li> 
+  </ul>
+</nav>
+
 <section class="begin">	
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="snowflake">  ❅  </div>
+<div class="snowflake">  ❆  </div>
+<div class="general">
 <h1>I'm <span class="demo">Dang Nguyen</span></h1>
 <ul>
 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
@@ -29,8 +74,9 @@
 <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
 </a></li>
 </ul>
-<a class="mouse bounce" href="#about"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></section>
-<br>
+<a class="mouse bounce" href="#about"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+</div>
+</section>
 <!-- intro -->
 <section class="about" id="about">
 	<div class="row no-gutters mt-4">
@@ -38,14 +84,16 @@
 			<img class="img-fluid rounded-circle shadow-lg rounded" src="18237897_1090946434382843_4511618473897832543_o.jpg" alt="avarta" >
 		</div>
 		<div class="col-md-6 col-ms-6 col-12 myprofile">
+		<h1 class="me"> ABOUT ME </h1>
 		<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum, remaining essentially unchanged.</p>
 		</div>
 	</div>
 </section>
 <!-- no-name -->
 <section class="no-name">
-	<div class="jumbotron mt-5">
+	<div class="jumbotron mt-4">
 	<div class="container-fluid">
+		<h1 class="text-center">My skills</h1>
    		<div class="row text-center mr-4 ml-4">
 			<div class="col-md-3 col-sm-12 below-about">
 				<div class="icon"><i class="fa fa-television" aria-hidden="true"></i></div>
@@ -74,7 +122,7 @@
 </section>
 
 <!--portfolio -->
-<section class="portfolio">
+<section class="portfolio" id="Portfolio">
   <div class="container-fluid">
 		<div class="row text-center">
 			<div class="col-12">
@@ -112,7 +160,7 @@
 	</div>		
 </section>
 
-<section class="Get-in-touch">
+<section class="Get-in-touch" id="Get-in-touch">
 	<div class="container-fluid">
 		<div class="row text-center">
 			<div class="col-12 mt-5">
@@ -149,9 +197,83 @@
 			<textarea type="text" name="message" class="form-control"></textarea>
 	  		</div>
 			
-	<button type="button" class="btn btn-outline-primary sendmessage">SEND A MESSAGE</button>
+	<div class="col-12 text-center"><button type="button" class="btn sendmessage">SEND A MESSAGE</button></div>
 	</div>
 	</form>	
+</section>
+	
+<!--rating-->
+<section class="rating" id="rating">
+<h1 class="open-rating"> Feedbacks</h1>
+<div class="star">
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+</div>
+<p class="h5 text-muted star">4.1 average based on 414 feedbacks.</p>
+
+<div class="row justify-content-around mx-5 judge">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5 "></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+
+
+	
 </section>
 <!--footer-->
 <section class="footer">

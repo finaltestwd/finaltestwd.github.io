@@ -10,6 +10,64 @@ margin:0}
 	font-family:MyFont0;
 	src: url("Acme-Regular.ttf")
 }
+.snowflake {
+  color: #fff;
+  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+/* Để  tuyết luôn rơi trên màn hình và không bị ảnh hưởng, set position fixed*/
+  position: fixed;
+  z-index: 999; /* cho chắc =)) */
+/* tuyết cần rơi từ điểm bắt đầu nằm trên cái màn hình */
+  top: -10%;
+}
+.snowflake:nth-of-type(0) {
+  left: 1%;
+}
+.snowflake:nth-of-type(1) {
+  left: 10%;
+}
+.snowflake:nth-of-type(2) {
+  left: 40%;
+}
+.snowflake:nth-of-type(3) {
+  left: 60%;
+}
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%
+  }
+  100% {
+    top: 100%
+  }
+}
+@keyframes snowflakes-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+}
+.snowflake {
+  animation-name: snowflakes-fall, snowflakes-shake; /* Sử dụng 2 hiệu ứng(Keyframes): kf_1, kf_2 */
+  animation-duration: 10s, 3s; /* duration tương ứng cho 2 hiệu ứng */
+  animation-timing-function: linear, ease-in-out; /* timing function tương ứng */
+  animation-iteration-count: infinite, infinite; /* lặp lại vô hạn hiệu ứng, để tuyết không ngừng rơi :v */
+  animation-play-state: running, running; /* cái này là để cho nó chạy thôi */
+}
+.snowflake:nth-of-type(0) {
+  animation-delay: 0s, 0s /* độ trễ tương ứng với kf_1, kf_2 */
+}
+.snowflake:nth-of-type(1) {
+  animation-delay: 1s, 1s
+}
+.snowflake:nth-of-type(2) {
+  animation-delay: 6s, .5s
+}
+.snowflake:nth-of-type(3) {
+  animation-delay: 4s, 2s
+}
 .begin {background-image:url(photo-1487925876428-ebd8a23ee1d4.jpg);
 width:100%;
 height:600px;
@@ -25,7 +83,7 @@ color:#CB7A7B;
 font-family:MyFont0
 }
 .begin ul {list-style-type: none;
-text-align: center}
+text-align: center; margin-top:-3%}
 
 .begin ul li{display:inline;
 color:aliceblue!important;
@@ -51,15 +109,21 @@ width:36%}
 
 .text-justify{ margin-right:40%}
 
+.me{font-family:MyFont;
+font-size:300%; color:#783094}
+
 .jumbotron{background-color:#F2FDFA!important}
 
-.icon{font-size:400%; color:#783094}
+.jumbotron h1{font-family:MyFont;
+font-size:300%; color:#783094; margin-bottom:2%;}
+
+.icon{font-size:400%; color:#E06F7B}
 
 .products img{width:70%}
 
 .portfolio {color:#783094;}
 .portfolio h1 {font-family:MyFont;
-font-size:300%}
+font-size:300%;}
 
 .Get-in-touch h1{font-family:MyFont;
 font-size:300%}
@@ -111,12 +175,88 @@ font-size:150%;
 
 .copyrightt {color:#A79999}
 
+.rating{margin-top:2%}
+.open-rating {
+  font-family:MyFont;
+font-size:300%;
+text-align:center;
+color:#783094
+}
+.star{text-align:center;}
+
+.judge{margin-bottom:3%;
+margin-top:3%}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+	color:#7E1F99;
+	font-size:110%
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+.name{margin:0}
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
+
 @keyframes bounce {
 	0%{transform:translateY(0);}
 	50%{transform:translateY(-20px);}
 	100%{transform:translateY(0);}
 }
-@media(max-width:480px){
+@media(max-width:414px){
 	.begin h1{color:aqua!important;
 			  font-size:180%}
 	
@@ -157,4 +297,16 @@ font-size:150%;
 	
 	.footer{ padding:0;
 	padding-top:10%}
+	
+	.judge{margin:0;
+		margin-bottom:8%}
+	.name{margin:0; margin-left:34%; font-size:150%}
+	.general h1 {font-size:200%}
+	.general{margin:0; margin-top:40%}
+	
+	.me{margin:0; margin-left:23.5%}
+	.begin ul{margin:0; margin-top:-2%}
+	
+	.about img{margin-top:2%;
+	margin-bottom:6%}
 }
